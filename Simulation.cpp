@@ -220,14 +220,19 @@ void Simulation::findStudent(){
             throw runtime_error("INVALID ID GIVEN...IT HAS TO BE GREATER THAN 0");
 
         }
+        Student s;
+        s.setId(id);
+        if(masterStudent->contains(s) == false){
+            throw runtime_error("ERROR: This student does not exist");
+        }else{
+            cout << *(masterStudent->returnData(s));
+        }
     }catch(exception& e){
         cout << "ERROR" << endl;
         cerr << e.what() << endl;
 
     }
-    Student s;
-    s.setId(id);
-    cout <<  *(masterStudent->returnData(s));
+    
 
 
 }
@@ -245,14 +250,19 @@ void Simulation::findFaculty(){
             throw runtime_error("INVALID ID GIVEN...IT HAS TO BE GREATER THAN 0");
 
         }
+        Faculty s;
+        s.setId(id);
+        if(masterFaculty->contains(s) == false){
+            throw runtime_error("ERROR: This student does not exist");
+        }else{
+            cout << *(masterFaculty->returnData(s));
+        }
     }catch(exception& e){
         cout << "ERROR" << endl;
         cerr << e.what() << endl;
 
     }
-    Faculty s;
-    s.setId(id);
-    cout << *(masterFaculty->returnData(s));
+    
 
 }
 
