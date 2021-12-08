@@ -253,7 +253,7 @@ void Simulation::findFaculty(){
         Faculty s;
         s.setId(id);
         if(masterFaculty->contains(s) == false){
-            throw runtime_error("ERROR: This student does not exist");
+            throw runtime_error("ERROR: This Faculty does not exist");
         }else{
             cout << *(masterFaculty->returnData(s));
         }
@@ -365,7 +365,7 @@ void Simulation::addStudent(){
         
         }
         if(masterStudent->contains(s)){
-            throw runtime_error("ERROR: Faculty member with the given id already exists");
+            throw runtime_error("ERROR: Student member with the given id already exists");
         }else{
             masterStudent->insert(s);
         }
@@ -706,7 +706,6 @@ void Simulation::getAdvisees(){
                 s.setId(list.removeHead());
                 if(masterStudent->contains(s)){ //make sure the student exists due to integrity issues
                     s = *(masterStudent->returnData(s));
-                    cout << s;
                 }else{ //if a student with a given id doesn't exist then just remove them from the list
                     temp.removeAdvisee(s);
                 }
