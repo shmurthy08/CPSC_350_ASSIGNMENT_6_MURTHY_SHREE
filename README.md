@@ -21,7 +21,7 @@ README ASSIGNMENT 6
     4. FileProcessor.cpp
     5. FileProcessor.h
     6. GenBST.h
-    7.GenLinkedList.h
+    7. GenLinkedList.h
     8. main.cpp
     9. Rollback.h
     10. Simulation.cpp
